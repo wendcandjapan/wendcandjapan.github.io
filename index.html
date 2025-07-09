@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Support Wendy & Candace's Japan Trip 🌸</title>
+<style>
+body {
+font-family: 'Arial', sans-serif;
+background: #fffafc;
+color: #444;
+text-align: center;
+padding: 20px;
+}
+h1 {
+color: #e75480;
+}
+.map {
+margin: 20px auto;
+max-width: 600px;
+}
+.city-button {
+background-color: #ffe0ef;
+border: 2px solid #e75480;
+border-radius: 12px;
+padding: 10px 20px;
+margin: 10px;
+cursor: pointer;
+font-size: 16px;
+transition: 0.3s;
+}
+.city-button:hover {
+background-color: #ffc8dd;
+}
+.donor-list {
+margin-top: 40px;
+text-align: left;
+max-width: 600px;
+margin-left: auto;
+margin-right: auto;
+}
+</style>
+</head>
+<body>
+
+<h1>🌸 Help Wendy & Candace Get to Japan! 🌸</h1>
+<p>We’re raising funds for our scout trip! Click a city to support our journey, donate via PayPal or Venmo, and see your name shine on our map ✨</p>
+
+<div class="map">
+<button class="city-button" onclick="showCity('Tokyo')">Tokyo</button>
+<button class="city-button" onclick="showCity('Kyoto')">Kyoto</button>
+<button class="city-button" onclick="showCity('Osaka')">Osaka</button>
+<button class="city-button" onclick="showCity('Hiroshima')">Hiroshima</button>
+<button class="city-button" onclick="showCity('Sapporo')">Sapporo</button>
+<button class="city-button" onclick="showCity('Fukuoka')">Fukuoka</button>
+<button class="city-button" onclick="showCity('Naha')">Naha (Okinawa)</button>
+</div>
+
+<div id="donation-section"></div>
+
+<div class="donor-list">
+<h3>🌸 Donors So Far 🌸</h3>
+<img src="IMG_8768.jpg"align="center" width="550" height="550"/>
+
+</div>
+<h3>Thank you for your support!💖</h3>
+<img src="IMG_7631.jpg"align="center" width="550" height="400"/>
+<script>
+const paypalLink = 'https://www.paypal.me/wendsw';
+const venmoLink = 'https://venmo.com/ava-grashorn';
+
+function showCity(city) {
+const section = document.getElementById('donation-section');
+section.innerHTML = `
+<h2>Support Our Journey to ${city} 🇯🇵</h2>
+<p>Choose a way to donate:</p>
+<a href="${paypalLink}" target="_blank">
+<button class="city-button">Donate with PayPal</button>
+</a>
+<a href="${venmoLink}" target="_blank">
+<button class="city-button">Donate with Venmo</button>
+</a>
+<p>After donating, <strong>send us your name</strong> so we can add you to the ${city} wall of support 💖</p>
+`;
+}
+</script>
+
+</body>
+</html>
